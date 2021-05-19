@@ -15,5 +15,24 @@
 
 /* Put CSS Styles Here */
 body {
-    background-color: black;
+    font-family: "Inter UI", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background: #393163;
+    display: flex;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-image: url(../assets/img/background.svg);
+    background-size: cover;
+}
+
+footer {
+    background: #393163;
+    display: flex;
+    height: 50px;
 }
