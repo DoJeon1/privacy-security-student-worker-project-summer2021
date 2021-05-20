@@ -173,7 +173,25 @@ input:checked + .slider:before {
 }
 
 .aliases {
-    padding: 10px 20px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details {
+    display: flex;
+    position: absolute;
+    right: 150px;
+}
+
+.blocked {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.forwarded {
+    text-align: center;
+    padding: 0 20px;
 }
 
 .item8 {
