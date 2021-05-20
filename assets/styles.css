@@ -55,6 +55,13 @@ header {
 
 }
 
+@media (max-width: 767px) {
+
+    .nav__item {
+        display: none;
+    }
+}
+
 /* Main Body */
 section {
     background-image: url(../assets/img/background.svg);
@@ -312,7 +319,7 @@ footer {
 
 @media (max-width: 767px) {
     footer {
-        height: 200px;
+        height: 165px;
         display: flex;
         flex-direction: column;
         position: absolute;
