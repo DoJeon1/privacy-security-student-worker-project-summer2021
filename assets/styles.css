@@ -18,6 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Inter UI", Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
 }
 
 /* Header */
@@ -27,13 +28,18 @@ header {
     display: flex;
     height: 50px;
     padding: 10px 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 96%;
 }
 
 .header__content {
     display: flex;
     position: absolute;
     right: 0;
-    top: 33px;
+    top: 25px;
+    padding: 0 30px;
 }
 
 .relay__logo {
@@ -67,4 +73,24 @@ footer {
     display: flex;
     height: 50px;
     padding: 10px 30px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 96%;
+}
+
+.mozilla__logo {
+    width: 150px;
+}
+
+.nav__footer {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 25px;
+    padding: 0 30px;
+}
+
+.footer__item {
+    padding: 0 20px;
 }
