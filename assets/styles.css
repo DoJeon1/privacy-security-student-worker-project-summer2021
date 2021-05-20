@@ -70,9 +70,10 @@ section {
 .main__container {
     display: grid;
     grid-row-gap: 10px;
-    padding: 150px;
+    padding:  120px 150px;
 }
 
+/* Grid items in main section */
 .item1 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -93,13 +94,13 @@ section {
 .item4 {
     grid-column-start: 1;
     grid-column-end: 2;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .item5 {
     grid-column-start: 3;
     grid-column-end: 4;
-    padding: 50px 0;
+    padding: 40px 0;
     text-align: right;
 }
 
