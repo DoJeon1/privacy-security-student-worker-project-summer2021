@@ -278,3 +278,20 @@ footer {
 .footer__item {
     padding: 0 20px;
 }
+
+@media (max-width: 768px) {
+    footer {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+    }
+
+    .nav__footer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+    }
+}
