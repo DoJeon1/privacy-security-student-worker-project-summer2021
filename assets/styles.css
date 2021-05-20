@@ -15,9 +15,12 @@
 
 /* Put CSS Styles Here */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "Inter UI", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+/* Header */
 header {
     background: #393163;
     color: rgb(230, 230, 230);
@@ -26,25 +29,38 @@ header {
     padding: 10px 30px;
 }
 
-.nav__list {
-    list-style: none;
+.header__content {
     display: flex;
-    flex-direction: row;
     position: absolute;
-    right: 0px;
-    padding: 10px 30px;
+    right: 0;
+    top: 33px;
+}
+
+.relay__logo {
+    width: 270px;
 }
 
 .nav__item {
-    padding: 0px 20px;
-    vertical-align: middle;
+    padding: 0 20px;
+
 }
 
+.header__item {
+    padding: 0 20px;
+
+}
+
+
+
+
+
+/* Main Body */
 section {
     background-image: url(../assets/img/background.svg);
     background-size: cover;
 }
 
+/* Footer */
 footer {
     background: #393163;
     color: rgb(230, 230, 230);
