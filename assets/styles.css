@@ -89,6 +89,13 @@ section {
     grid-column-start: 3;
     grid-column-end: 4;
     text-align: right;
+    background: rgb(0, 81, 255);
+    color: #fff;
+    width: fit-content;
+    padding: 5px;
+    position: absolute;
+    top: 150px;
+    right: 150px;
 }
 
 .item4 {
@@ -178,6 +185,10 @@ input:checked + .slider:before {
     flex-direction: column;
 }
 
+.email__details {
+    color: rgb(155, 155, 155);
+}
+
 .details {
     display: flex;
     position: absolute;
@@ -187,6 +198,7 @@ input:checked + .slider:before {
 .blocked {
     text-align: center;
     padding: 0 20px;
+    color: rgb(155, 155, 155);
 }
 
 .forwarded {
