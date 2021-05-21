@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+<!-- Daniel Jeon -- Was not able to finish due to other work... -->
 <head>
     <meta charset="utf-8">
     <title>Firefox Relay</title>
@@ -25,12 +26,23 @@
                 <a class="header__item"><i class="fas fa-circle"></i></a>
             </div>
         </div>
+        <div class="header__mobile">
+            <button onclick="dropDownMobile()" class="dropbtnMobile">
+                Menu
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <nav id="dropdownMobile" class="nav__mobile">
+                <a class="mobile__item">Home</a>
+                <a class="mobile__item">FAQ</a>
+            </nav>
+        </div>
     </header>
 
     <section>
         <div class="main__container">
-            <div class="item1"><strong>Manage your Relay aliases</strong></div>
-            <div class="item2"><strong>4</strong> remaining aliases</div>
+            <div class="item0"><strong>Manage your Relay aliases</strong></div>
+            <div class="item1"><strong>4</strong> remaining aliases</div>
+            <div class="item2"></div>
             <a class="item3"><i class="fas fa-plus"></i> Generate New Alias</a>
             <div class="item4">Add account name
                 <i class="fas fa-pencil-alt"></i>
@@ -50,17 +62,6 @@
                             Show Details
                             <i class="fas fa-chevron-down"></i>
                         </button>
-                        <div class="dropdown__content">
-                            <a>
-                                <p>Created:</p>
-                                <p>May 19, 2021</p>
-                            </a>
-                            <a>
-                                <p>Forward emails to</p>
-                                <p>donghwan.dj@gmail.com</p>
-                            </a>
-
-                        </div>
                     </div>
                 </div>
 
@@ -72,6 +73,32 @@
                     <div class="forwarded">
                         <p><strong>0</strong></p>
                         <p>Forwarded</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item7">
+                <div id="dropDown" class="dropdown__content">
+                    <div class="desktop">
+                        <a>
+                            <p>Created:</p>
+                            <p>May 19, 2021</p>
+                        </a>
+                        <a>
+                            <p>Forward emails to</p>
+                            <p>donghwan.dj@gmail.com</p>
+                        </a>
+                        <button class="delete">
+                            Delete
+                        </button>
+                    </div>
+                    <div class="mobile">
+                        <p class="mobile1">Blocked</p>
+                        <p class="mobile2"><strong>0</strong></p>
+                        <p class="mobile3">Forwarded</p>
+                        <p class="mobile4"><strong>0</strong></p>
+                        <p class="mobile5">Created:</p>
+                        <p class="mobile6">May 19, 2021</p>
+                        <a class="delete">Delete</a>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,22 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Inter UI", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 /* Header */
@@ -47,18 +63,79 @@ header {
 
 .nav__item {
     padding: 0 20px;
-
 }
 
 .header__item {
     padding: 0 20px;
+}
 
+.header__mobile {
+    display: none;
 }
 
 @media (max-width: 767px) {
 
+    header {
+        height: 35px;
+        padding-left: 10px;
+    }
+
+    .header__content {
+        top: 20px;
+    }
+
+    .relay__logo {
+        width: 200px;
+    }
+
     .nav__item {
         display: none;
+    }
+
+    .header__mobile {
+        display: block;
+        position: absolute;
+        top: 53px;
+        width: 100%;
+        left: 0;
+        height: 35px;
+    }
+
+    /* Dropdown menu */
+    .dropbtnMobile {
+        background: #463f6b;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        height: 35px;
+    }
+    
+    .dropdownMobile {
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav__mobile {
+        display: none;
+        position: absolute;
+        width: 90%;
+        background-color: #463f6b;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        z-index: 1;
+        padding: 0 20px;
+        text-align: right;
+    }
+    
+    .nav__mobile a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 20px 5px 0;
+    }
+    
+    .dropdownMobile a:hover {
+        background-color: #ddd;
     }
 }
 
@@ -77,16 +154,16 @@ section {
 .main__container {
     display: grid;
     grid-row-gap: 10px;
-    padding:  120px 150px;
+    padding: 120px 150px;
 }
 
 /* Grid items in main section */
-.item1 {
+.item0 {
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.item2 {
+.item1 {
     grid-column-start: 3;
     grid-column-end: 4;
     text-align: right;
@@ -100,8 +177,7 @@ section {
     color: #fff;
     width: fit-content;
     padding: 5px;
-    display: block;
-    margin-right: 0;
+    justify-self: flex-end;
 }
 
 .item4 {
@@ -191,6 +267,10 @@ input:checked + .slider:before {
     flex-direction: column;
 }
 
+.relay {
+    padding-left: 5px;
+}
+
 .email__details {
     color: rgb(155, 155, 155);
 }
@@ -214,41 +294,68 @@ input:checked + .slider:before {
 
 /* Dropdown menu */
 .dropbtn {
-    padding: 16px;
+    background: none;
+    color: rgb(155, 155, 155);
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
   
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #b6b6b6;
+    opacity: 0.7;
 }
   
 .dropdown {
     position: relative;
     display: inline-block;
 }
-  
+
 .dropdown__content {
     display: none;
     position: absolute;
+    width: fit-content;
     background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding: 0 20px;
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: none;
 }
   
 .dropdown__content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
+    padding-right: 20px;
 }
   
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+    background-color: #ddd;
+}
 
-.show {display: block;}
+.delete {
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.delete:hover, .delete:focus {
+    opacity: 0.7;
+    cursor: pointer;
+}
+  
+.show {
+    display: flex;
+}
 
 .item8 {
     grid-column-start: 1;
@@ -258,11 +365,15 @@ input:checked + .slider:before {
 
 @media (max-width: 767px) {
 
+    .main__container {
+        padding: 60px 10px 20px 10px;
+    }
+
     .details {
         display: none;
     }
 
-    .item1 {
+    .item0 {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -270,7 +381,7 @@ input:checked + .slider:before {
         grid-column-end: 4;
     }
 
-    .item2 {
+    .item1 {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -282,6 +393,73 @@ input:checked + .slider:before {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .item4 {
+        display: none;
+    }
+
+    .dropbtn {
+        font-size: 13px;
+    }
+
+    .dropdown__content {
+        width: 84%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: grid;
+        grid-row-gap: 5px;
+    }
+
+    .mobile1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .mobile3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile4 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .mobile5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .delete {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .item8 {
+        padding: 5px 0;
         grid-column-start: 1;
         grid-column-end: 4;
     }
@@ -315,11 +493,12 @@ footer {
 
 .footer__item {
     padding: 0 20px;
+    color: #fff;
 }
 
 @media (max-width: 767px) {
     footer {
-        height: 165px;
+        height: 140px;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -328,10 +507,11 @@ footer {
 
     .mozilla__logo {
         display: block;
+        width: 100px;
+        height: 40px;
         margin-left: auto;
         margin-right: auto;
         padding: 5px;
-        left: 40%;
     }
 
     .nav__footer {
@@ -339,11 +519,11 @@ footer {
         flex-direction: column;
         position: absolute;
         text-align: center;
-        bottom: 25px;
+        bottom: 10px;
         left: 0;
     }
     
     .footer__item {
-        padding: 5px;
+        padding: 4px;
     }
 }
