@@ -387,7 +387,7 @@ footer {
 
 @media (max-width: 767px) {
     footer {
-        height: 165px;
+        height: 140px;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -396,10 +396,11 @@ footer {
 
     .mozilla__logo {
         display: block;
+        width: 100px;
+        height: 40px;
         margin-left: auto;
         margin-right: auto;
         padding: 5px;
-        left: 40%;
     }
 
     .nav__footer {
@@ -407,11 +408,11 @@ footer {
         flex-direction: column;
         position: absolute;
         text-align: center;
-        bottom: 25px;
+        bottom: 10px;
         left: 0;
     }
     
     .footer__item {
-        padding: 5px;
+        padding: 4px;
     }
 }
