@@ -111,10 +111,6 @@ header {
         height: 35px;
     }
     
-    .dropbtnMobile:hover, .dropbtn:focus {
-        opacity: 0.7;
-    }
-    
     .dropdownMobile {
         position: relative;
         display: inline-block;
@@ -123,27 +119,23 @@ header {
     .nav__mobile {
         display: none;
         position: absolute;
-        width: fit-content;
-        background-color: #f1f1f1;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        width: 90%;
+        background-color: #463f6b;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         z-index: 1;
-        align-items: center;
         padding: 0 20px;
+        text-align: right;
     }
     
     .nav__mobile a {
-        color: black;
+        color: #fff;
         text-decoration: none;
         display: block;
-        padding-right: 20px;
+        padding: 5px 20px 5px 0;
     }
     
     .dropdownMobile a:hover {
         background-color: #ddd;
-    }
-    
-    .show {
-        display: flex;
     }
 }
 
@@ -175,10 +167,6 @@ section {
     grid-column-start: 3;
     grid-column-end: 4;
     text-align: right;
-}
-
-.item2 {
-    content: "";
 }
 
 .item3 {
