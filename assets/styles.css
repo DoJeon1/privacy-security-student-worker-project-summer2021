@@ -317,8 +317,16 @@ input:checked + .slider:before {
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    align-items: center;
     padding: 0 20px;
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: none;
 }
   
 .dropdown__content a {
@@ -395,6 +403,59 @@ input:checked + .slider:before {
 
     .dropbtn {
         font-size: 13px;
+    }
+
+    .dropdown__content {
+        width: 84%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: grid;
+        grid-row-gap: 5px;
+    }
+
+    .mobile1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .mobile3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile4 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .mobile5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .mobile6 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
+
+    .delete {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        padding-bottom: 5px;
     }
 
     .item8 {
