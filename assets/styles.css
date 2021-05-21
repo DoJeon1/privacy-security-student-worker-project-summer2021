@@ -191,6 +191,10 @@ input:checked + .slider:before {
     flex-direction: column;
 }
 
+.relay {
+    padding-left: 5px;
+}
+
 .email__details {
     color: rgb(155, 155, 155);
 }
@@ -214,14 +218,15 @@ input:checked + .slider:before {
 
 /* Dropdown menu */
 .dropbtn {
-    padding: 16px;
+    background: none;
+    color: rgb(155, 155, 155);
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
   
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #b6b6b6;
+    opacity: 0.7;
 }
   
 .dropdown {
@@ -246,9 +251,13 @@ input:checked + .slider:before {
     display: block;
 }
   
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+  
+.show {
+    display: block;
+}
 
 .item8 {
     grid-column-start: 1;
@@ -315,6 +324,7 @@ footer {
 
 .footer__item {
     padding: 0 20px;
+    color: #fff;
 }
 
 @media (max-width: 767px) {
